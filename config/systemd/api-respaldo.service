@@ -1,0 +1,13 @@
+[Unit]
+Description=API Flask para respaldos CIBNOR
+After=network.target
+
+[Service]
+User=francisco-rod
+WorkingDirectory=/home/francisco-rod/Proyecto_CIBNOR
+ExecStart=/usr/bin/python3 /home/francisco-rod/Proyecto_CIBNOR/api_respaldo.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+# Archivos con contraseñas y datos privados
+config_privada.py
+config_privada.sh
+secrets.h
+.env
+*.key
+*.crt
+*.pem
+passwd
+
+# Archivos temporales, respaldos y datos generados
+*.bak
+*.log
+__pycache__/
+*.xlsx
+*.csv
+registro_prueba.txt

@@ -1,0 +1,14 @@
+[Unit]
+Description=Servicio Puente MQTT a MariaDB para el proyecto CIBNOR
+After=network.target mariadb.service mosquitto.service
+
+[Service]
+Type=simple
+User=francisco-rod
+WorkingDirectory=/home/francisco-rod/Proyecto_CIBNOR
+ExecStart=/usr/bin/python3 -u /home/francisco-rod/Proyecto_CIBNOR/mqtt_a_mariadb.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

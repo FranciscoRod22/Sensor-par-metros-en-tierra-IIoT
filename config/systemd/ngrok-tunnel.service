@@ -1,0 +1,12 @@
+[Unit]
+Description=Tunel ngrok para API de respaldos CIBNOR
+After=network.target
+
+[Service]
+User=francisco-rod
+ExecStart=/snap/bin/ngrok http --url=TU-DOMINIO-ESTATICO.ngrok-free.dev 5000
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
