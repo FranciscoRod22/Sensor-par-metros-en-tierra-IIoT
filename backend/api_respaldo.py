@@ -8,7 +8,7 @@ def ejecutar_respaldo():
     print("\n>>> ¡Petición recibida desde Google Sheets! Iniciando respaldo...")
     
     # El comando que ya sabemos que funciona
-    comando = 'python3 /home/francisco-rod/Proyecto_CIBNOR/exportar_bd.py && rclone copy "$(ls -t /home/francisco-rod/Proyecto_CIBNOR/Respaldo_Suelo_*.xlsx | head -n 1)" cibnor_drive:Respaldos_CIBNOR -P'
+    comando = 'python3 /home/francisco-rod/Proyecto_CIBNOR/exportar_bd.py && rclone move "$(ls -t /tmp/Respaldo_Suelo_*.xlsx | head -n 1)" cibnor_drive:Respaldos_CIBNOR -P'
     
     # Ejecuta el comando en segundo plano para no bloquear el servidor web
     subprocess.Popen(comando, shell=True)
