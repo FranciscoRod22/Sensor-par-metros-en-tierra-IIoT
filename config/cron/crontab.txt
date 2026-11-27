@@ -1,0 +1,1 @@
+0 9,18 * * * /bin/bash -c '/usr/bin/python3 /home/francisco-rod/Proyecto_CIBNOR/exportar_bd.py && /usr/bin/rclone copy "$(ls -t /home/francisco-rod/Proyecto_CIBNOR/Respaldo_Suelo_*.xlsx | head -n 1)" cibnor_drive:Respaldos_CIBNOR'
